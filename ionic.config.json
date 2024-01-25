@@ -1,0 +1,7 @@
+{
+  "name": "publicando",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
