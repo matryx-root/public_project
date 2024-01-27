@@ -1,0 +1,11 @@
+<ion-item>
+  <ion-label>
+    <img [src]="aviso.imagenUrl" *ngIf="aviso.imagenUrl" />
+    <h2>{{ aviso.titulo }}</h2>
+    <p>{{ aviso.descripcion }}</p>
+    <p>Fecha: {{ aviso.fecha | fecha }}</p>
+  </ion-label>
+  <ion-button fill="outline" slot="end" class="custom-button" (click)="onDeleteClick()">
+    Eliminar
+  </ion-button>
+</ion-item>

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Avisos</ion-title>
+  </ion-toolbar>
+
+  <ion-button routerLink="/crear-aviso">Crear Aviso</ion-button>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/crear-aviso">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let aviso of avisos">
+      <!-- Mostrar la imagen si está disponible -->
+      <ion-thumbnail slot="start">
+        <img [src]="aviso.imagenUrl" *ngIf="aviso.imagenUrl">
+      </ion-thumbnail>
+
+      <!-- Detalles del aviso -->
+      <ion-label>
+        <h2>{{ aviso.titulo }}</h2>
+        <p>{{ aviso.descripcion }}</p>
+        <!-- Suponiendo que tus avisos tienen una fecha -->
+        <p>Fecha: {{ aviso.fecha | fecha }}</p> <!-- Usa un pipe para formatear la fecha si es necesario -->
+      </ion-label>
+
+      <ion-button (click)="eliminarAviso(aviso)">
+        Eliminar
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Mensaje si no hay avisos -->
+  <div *ngIf="avisos.length === 0">
+    No hay avisos para mostrar.
+  </div>
+</ion-content>

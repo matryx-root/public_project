@@ -1,0 +1,49 @@
+ion-header {
+--background: #f8f8f8; // Color de fondo del encabezado
+--ion-color-primary: #3880ff; // Color primario por defecto de Ionic para el título y los botones
+--border-color: #d7d8da; // Color de la línea divisora
+
+ion-toolbar {
+border-bottom: 1px solid var(--border-color); // Línea divisora entre el header y el contenido
+padding: 0 16px; // Espaciado alrededor del título
+}
+
+ion-title {
+text-align: center; // Centrar el título
+}
+  }
+
+ion-content {
+--background: #fff; // Color de fondo para el contenido
+text-align: center; // Centrar el texto de confirmación
+
+p {
+padding: 16px; // Espaciado alrededor del texto
+font-size: 1rem; // Tamaño del texto
+color: #333; // Color del texto
+}
+
+ion-row {
+--padding-start: 16px; // Espaciado al inicio de la fila
+--padding-end: 16px; // Espaciado al final de la fila
+justify-content: center; // Centrar las columnas si hay espacio adicional
+
+ion-col {
+padding: 8px; // Espaciado alrededor de las columnas
+
+ion-button {
+--background: #3880ff; // Color de fondo para el botón "Cancelar"
+--color: #fff; // Color del texto para los botones
+--border-radius: 4px; // Bordes redondeados para los botones
+--padding-top: 16px; // Espaciado superior
+--padding-bottom: 16px; // Espaciado inferior
+font-weight: bold; // Negrita para el texto del botón
+
+&[color="danger"] {
+--background: #f1453d; // Color de fondo para el botón "Confirmar"
+}
+}
+  }
+}
+  }
+

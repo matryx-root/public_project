@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Aviso</ion-title>
+  </ion-toolbar>
+
+
+  <ion-button (click)="navegarAHome()">Volver a Inicio</ion-button>
+
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="crearAviso()">
+    <ion-item>
+      <!-- Título -->
+      <ion-input label="Título" [(ngModel)]="aviso.titulo" name="titulo" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <!-- Descripción -->
+      <ion-textarea label="Descripción" [(ngModel)]="aviso.descripcion" name="descripcion" required></ion-textarea>
+    </ion-item>
+    <!-- crear-aviso.page.html -->
+    <ion-button (click)="tomarFoto()">Tomar Foto</ion-button>
+
+
+    <!-- Botón para crear aviso -->
+    <ion-button expand="block" type="submit" [disabled]="!aviso.titulo || !aviso.descripcion">Crear Aviso</ion-button>
+  </form>
+</ion-content>
